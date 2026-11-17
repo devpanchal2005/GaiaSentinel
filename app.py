@@ -5,6 +5,8 @@ home = st.Page("pages/Welcome.py", icon='🏠')
 
 detect_trash = st.Page("pages/Detect_Trash.py", icon='🔍') # For detection
 
+gallery = st.Page("pages/Gallery.py", icon='🖼️') # For detection gallery
+
 # analysis_report = st.Page("pages/Analysis_Report.py", icon='📈') # For analysis report
 
 what_we_did = st.Page("pages/What_We_Did.py", icon='🤔') # For what we did
@@ -12,7 +14,7 @@ what_we_did = st.Page("pages/What_We_Did.py", icon='🤔') # For what we did
 # Group pages
 pg = st.navigation({
     "Home": [home],
-    "Detect": [detect_trash], 
+    "Detect": [detect_trash, gallery],
     "Project Walkthrough" : [what_we_did]
 })
 

@@ -1,0 +1,265 @@
+[
+  {
+    "file": "ground_crushed_cup.jpg",
+    "caption": "Crushed cup in sand",
+    "scene": "Park",
+    "detections": [
+      "Paper cup 0.42"
+    ],
+    "photographer": "Henry Söderlund",
+    "photographer_url": "https://www.flickr.com/photos/46563758@N04",
+    "source": "Flickr",
+    "url": "https://www.flickr.com/photos/46563758@N04/52187367120",
+    "title": "100% littering",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "night_garbage_bags.jpg",
+    "caption": "Garbage bags by a doorway",
+    "scene": "Low light",
+    "detections": [
+      "Single-use carrier bag 0.72",
+      "Garbage bag 0.25"
+    ],
+    "photographer": "Taras Chuiko",
+    "photographer_url": "https://www.pexels.com/@taraschuiko/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/bags-of-trash-by-the-entrance-of-a-building-11886773/"
+  },
+  {
+    "file": "park_fast_food.jpg",
+    "caption": "Fast food trash on grass",
+    "scene": "Park",
+    "detections": [
+      "Paper cup 0.85",
+      "Crisp packet 0.76",
+      "Foam food container 0.58"
+    ],
+    "photographer": "Valeri Mak",
+    "photographer_url": "https://www.pexels.com/@valeri-mak-2319397/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/shoes-on-grass-and-fast-food-trash-12577317/"
+  },
+  {
+    "file": "park_cup.jpg",
+    "caption": "Cup on park grass",
+    "scene": "Park",
+    "detections": [
+      "Paper cup 0.96"
+    ],
+    "photographer": "juan rojas",
+    "photographer_url": "https://www.pexels.com/@juan-rojas-24302738/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/red-and-white-disposable-cup-on-green-grass-13447643/"
+  },
+  {
+    "file": "beach_bottle.jpg",
+    "caption": "Bottle on the shore",
+    "scene": "Beach",
+    "detections": [
+      "Clear plastic bottle 0.74"
+    ],
+    "photographer": "medinegurbet",
+    "photographer_url": "https://www.pexels.com/@medinegurbet-21435626/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/trash-on-shore-13463090/"
+  },
+  {
+    "file": "street_cup.jpg",
+    "caption": "Disposable cup on a sidewalk",
+    "scene": "Street",
+    "detections": [
+      "Styrofoam piece 0.40",
+      "Paper cup 0.25"
+    ],
+    "photographer": "Lauren Boswell",
+    "photographer_url": "https://www.pexels.com/@lauren-boswell-191857954/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/a-disposable-cup-lying-on-the-pavement-18399845/"
+  },
+  {
+    "file": "park_bottle.jpg",
+    "caption": "Bottle among plants",
+    "scene": "Park",
+    "detections": [
+      "Glass bottle 0.49"
+    ],
+    "photographer": "Joaquin Carfagna",
+    "photographer_url": "https://www.pexels.com/@joaquin-carfagna-3131171/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/empty-bottle-of-vodka-by-plants-in-city-20185420/"
+  },
+  {
+    "file": "cigarette_butts.jpg",
+    "caption": "Cigarette butts",
+    "scene": "Cigarettes",
+    "detections": [
+      "Corrugated carton 0.95",
+      "Cigarette 0.89",
+      "Cigarette 0.88",
+      "Cigarette 0.82"
+    ],
+    "photographer": "Johannes Plenio",
+    "photographer_url": "https://www.pexels.com/@jplenio/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/cigarettes-in-a-bin-20208923/"
+  },
+  {
+    "file": "water_stream_bottle.jpg",
+    "caption": "Bottle in a stream",
+    "scene": "Water",
+    "detections": [
+      "Clear plastic bottle 0.77",
+      "Plastic film 0.67"
+    ],
+    "photographer": "Engin Akyurt",
+    "photographer_url": "https://www.pexels.com/@enginakyurt/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/plastic-bottle-pollution-in-nature-stream-31368357/"
+  },
+  {
+    "file": "night_cup.jpg",
+    "caption": "Cup on a dark street",
+    "scene": "Low light",
+    "detections": [
+      "Drink can 0.79",
+      "Plastic film 0.53"
+    ],
+    "photographer": "Kamshotthat",
+    "photographer_url": "https://www.pexels.com/@kampratt/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/mcdonald-disposable-cup-3391856/"
+  },
+  {
+    "file": "street_leaves_litter.jpg",
+    "caption": "Litter among fallen leaves",
+    "scene": "Street",
+    "detections": [
+      "Plastic film 0.62",
+      "Plastic film 0.40"
+    ],
+    "photographer": "cottonbro studio",
+    "photographer_url": "https://www.pexels.com/@cottonbro/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/dried-leaves-on-the-ground-4542838/"
+  },
+  {
+    "file": "street_juice_carton.jpg",
+    "caption": "Juice carton on asphalt",
+    "scene": "Street",
+    "detections": [
+      "Paper cup 0.98"
+    ],
+    "photographer": "Lisa Fotios",
+    "photographer_url": "https://www.pexels.com/@fotios-photos/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/dumped-carton-box-of-juice-on-asphalt-road-4612536/"
+  },
+  {
+    "file": "park_coffee_cup_leaves.jpg",
+    "caption": "Coffee cup in autumn leaves",
+    "scene": "Park",
+    "detections": [
+      "Drink can 0.96",
+      "Plastic bottle cap 0.58"
+    ],
+    "photographer": "Henry Söderlund",
+    "photographer_url": "https://www.flickr.com/photos/46563758@N04",
+    "source": "Flickr",
+    "url": "https://www.flickr.com/photos/46563758@N04/51608941193",
+    "title": "Autumn takeaway",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "street_garbage_bags.jpg",
+    "caption": "Garbage bags on a sidewalk",
+    "scene": "Street",
+    "detections": [
+      "Garbage bag 0.91",
+      "Glass bottle 0.27"
+    ],
+    "photographer": "Erik Mclean",
+    "photographer_url": "https://www.pexels.com/@introspectivedsgn/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/garbage-bags-near-building-on-street-7434587/"
+  },
+  {
+    "file": "street_mask_on_bin.jpg",
+    "caption": "Mask on a litter bin",
+    "scene": "Street",
+    "detections": [
+      "Tissues 0.72",
+      "Plastic film 0.63"
+    ],
+    "photographer": "Henry Söderlund",
+    "photographer_url": "https://www.flickr.com/photos/46563758@N04",
+    "source": "Flickr",
+    "url": "https://www.flickr.com/photos/46563758@N04/50286376743",
+    "title": "No trash littering",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "street_cup_in_mud.jpg",
+    "caption": "Plastic cup in mud",
+    "scene": "Street",
+    "detections": [
+      "Styrofoam piece 0.41"
+    ],
+    "photographer": "Ivan Radic",
+    "photographer_url": "https://www.flickr.com/photos/26344495@N05",
+    "source": "Flickr",
+    "url": "https://www.flickr.com/photos/26344495@N05/51206991494",
+    "title": "Plastic cup dumped in the mud",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "beach_plastic.jpg",
+    "caption": "Plastic on a beach",
+    "scene": "Beach",
+    "detections": [
+      "Plastic bottle cap 0.71",
+      "Plastic film 0.66",
+      "Plastic film 0.61",
+      "Plastic film 0.38"
+    ],
+    "photographer": "Ron Lach",
+    "photographer_url": "https://www.pexels.com/@ron-lach/",
+    "source": "Pexels",
+    "url": "https://www.pexels.com/photo/plastic-scattered-on-beach-shore-9034664/"
+  },
+  {
+    "file": "street_cup_asphalt.jpg",
+    "caption": "Cup on asphalt",
+    "scene": "Street",
+    "detections": [
+      "Drink can 0.51",
+      "Drink can 0.34"
+    ],
+    "photographer": "Henry Söderlund",
+    "photographer_url": "https://www.flickr.com/photos/46563758@N04",
+    "source": "Flickr",
+    "url": "https://www.flickr.com/photos/46563758@N04/52042272060",
+    "title": "Sleeping littering",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "street_can_cobblestones.jpg",
+    "caption": "Beer can on cobblestones",
+    "scene": "Street",
+    "detections": [
+      "Drink can 0.83"
+    ],
+    "photographer": "Henry Söderlund",
+    "photographer_url": "https://www.flickr.com/photos/46563758@N04",
+    "source": "Flickr",
+    "url": "https://www.flickr.com/photos/46563758@N04/51314328206",
+    "title": "Premium littering",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  }
+]

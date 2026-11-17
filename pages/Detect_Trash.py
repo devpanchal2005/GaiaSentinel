@@ -94,9 +94,9 @@ if data:
 st.markdown("### 🖼️ Sample Images")
 st.caption("Drag a sample into the upload box, or click Detect")
 
-for start in range(0, len(samples), 4):
-    cols = st.columns(4)
-    for col, sample in zip(cols, samples[start:start + 4]):
+for start in range(0, len(samples), 3):
+    cols = st.columns(3)
+    for col, sample in zip(cols, samples[start:start + 3]):
         with col:
             is_selected = selected is not None and sample["file"] == selected["file"]
             st.image(square_thumbnail(os.path.join(SAMPLES_DIR, sample["file"])), caption=sample["caption"], use_container_width=True)
@@ -107,3 +107,10 @@ for start in range(0, len(samples), 4):
                 on_click=toggle_sample, args=(sample["file"],),
                 use_container_width=True,
             )
+
+# CC BY photos must be credited with their licence wherever they are shown
+with st.expander("Photo credits"):
+    for sample in samples:
+        licence = f" · [{sample['license']}]({sample['license_url']})" if sample.get("license") else ""
+        st.markdown(f"- {sample['caption']}: [{sample['photographer']}]({sample['url']}) on {sample['source']}{licence}")
+    st.caption("Thumbnails are cropped to squares.")
