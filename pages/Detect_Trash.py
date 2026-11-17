@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 @st.cache_resource
 def load_model():
-    return YOLO("yolov8s.pt")  # yolov8s model you trained
+    return YOLO("taco_yolov8s.pt")  # YOLOv8s pretrained on 60 TACO classes (jeremy-rico/litter-detection)
 
 st.title("🔍 Trash Detection")
 
