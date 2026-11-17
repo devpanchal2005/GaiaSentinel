@@ -1,7 +1,4 @@
 import streamlit as st
-import pandas as pd
-from PIL import Image
-import plotly.express as px
 import os
 
 st.set_page_config(page_title="GaiaSentinel", page_icon=":guardsman:", layout="wide")
@@ -33,7 +30,7 @@ with col2:
 # Features section
 st.markdown("## 🚀 Key Features")
 
-feature_cols = st.columns(3)
+feature_cols = st.columns(2)
 
 with feature_cols[0]:
     with st.container(border=True):
@@ -48,21 +45,11 @@ with feature_cols[0]:
 with feature_cols[1]:
     with st.container(border=True):
         st.markdown("""
-        ### 📊 Analytics Dashboard
-        - Detailed classification reports
-        - Visual data insights
-        - Performance metrics
-        - Historical tracking
-        """)
-
-with feature_cols[2]:
-    with st.container(border=True):
-        st.markdown("""
-        ### 🎯 14 Waste Categories
-        - Plastic bags & wrappers
-        - Cigarettes
-        - Bottles & caps
-        - Cans & containers and 10 more categories 
+        ### 🎯 60 TACO Litter Categories
+        - Bottles, caps & lids
+        - Cans, cartons & cups
+        - Wrappers, bags & films
+        - Cigarettes and many more
         """)
 
 # How it works section
@@ -117,39 +104,38 @@ Ready to start detecting trash? Here's how to begin:
 1. **Navigate to Detection**: Use the sidebar to access the detection page
 2. **Upload an Image**: Choose a clear image of waste items
 3. **Get Results**: View the AI's classification and confidence scores
-4. **Explore Analytics**: Check out detailed insights and reports
 """)
 
-# Statistics section (sample data)
+# Detection categories section
 st.markdown("---")
 st.markdown("## 📈 Detection Categories")
 
-# Sample statistics for the 14 categories
-categories_data = {
-    'Category': [
-        'Plastic bag & wrapper', 'Cigarette', 'Unlabeled litter', 'Bottle',
-        'Bottle cap', 'Other plastic', 'Can', 'Carton', 'Cup', 'Straw',
-        'Paper', 'Broken glass', 'Styrofoam piece', 'Pop tab'
-    ],
-    'Annotations': [850, 667, 517, 439, 289, 273, 273, 251, 192, 161, 148, 138, 112, 99],
-    'Category ID': list(range(14))
-}
+st.markdown("""
+The model detects all **60 litter categories** defined by the TACO dataset.
+""")
 
-df = pd.DataFrame(categories_data)
+# Class names taken from the model's names (model.names), in class ID order
+TACO_CLASSES = [
+    'Aluminium foil', 'Battery', 'Aluminium blister pack', 'Carded blister pack',
+    'Other plastic bottle', 'Clear plastic bottle', 'Glass bottle', 'Plastic bottle cap',
+    'Metal bottle cap', 'Broken glass', 'Food Can', 'Aerosol', 'Drink can', 'Toilet tube',
+    'Other carton', 'Egg carton', 'Drink carton', 'Corrugated carton', 'Meal carton',
+    'Pizza box', 'Paper cup', 'Disposable plastic cup', 'Foam cup', 'Glass cup',
+    'Other plastic cup', 'Food waste', 'Glass jar', 'Plastic lid', 'Metal lid',
+    'Other plastic', 'Magazine paper', 'Tissues', 'Wrapping paper', 'Normal paper',
+    'Paper bag', 'Plastified paper bag', 'Plastic film', 'Six pack rings', 'Garbage bag',
+    'Other plastic wrapper', 'Single-use carrier bag', 'Polypropylene bag', 'Crisp packet',
+    'Spread tub', 'Tupperware', 'Disposable food container', 'Foam food container',
+    'Other plastic container', 'Plastic gloves', 'Plastic utensils', 'Pop tab',
+    'Rope & strings', 'Scrap metal', 'Shoe', 'Squeezable tube', 'Plastic straw',
+    'Paper straw', 'Styrofoam piece', 'Unlabeled litter', 'Cigarette',
+]
 
-# Create a bar chart
-fig = px.bar(
-    df, 
-    x='Category', 
-    y='Annotations',
-    title='Training Data Distribution by Category',
-    color='Annotations',
-    color_continuous_scale='viridis'
-)
-fig.update_xaxes(tickangle=45)
-fig.update_layout(height=500)
-
-st.plotly_chart(fig, use_container_width=True)
+class_cols = st.columns(4)
+per_col = (len(TACO_CLASSES) + len(class_cols) - 1) // len(class_cols)
+for i, col in enumerate(class_cols):
+    with col:
+        st.markdown("\n".join(f"- {name}" for name in TACO_CLASSES[i * per_col:(i + 1) * per_col]))
 
 
 

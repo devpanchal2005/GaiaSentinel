@@ -13,7 +13,7 @@ what_we_did = st.Page("pages/What_We_Did.py", icon='🤔') # For what we did
 pg = st.navigation({
     "Home": [home],
     "Detect": [detect_trash], 
-    "Project Walkthrough" : [what_we_did],
+    "Project Walkthrough" : [what_we_did]
 })
 
 # Run the navigation

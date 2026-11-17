@@ -4,4 +4,3 @@ torchvision
 ultralytics==8.3.172
 streamlit==1.55.0
 pillow
-plotly
