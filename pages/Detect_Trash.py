@@ -63,6 +63,6 @@ else:
         for col, sample in zip(cols, samples[start:start + 4]):
             with col:
                 st.image(square_thumbnail(os.path.join(SAMPLES_DIR, sample["file"])), caption=sample["caption"], use_container_width=True)
-                if st.button("Detect", key=f"detect_{sample['file']}"):
+                if st.button("Detect", key=f"detect_{sample['file']}", use_container_width=True):
                     st.session_state["sample_file"] = sample["file"]
                     st.rerun()
