@@ -1,11 +1,30 @@
 import streamlit as st
 from PIL import Image
 import os
+import json
+from PIL import ImageOps
 from ultralytics import YOLO
+
+SAMPLES_DIR = os.path.join("assets", "samples")
 
 @st.cache_resource
 def load_model():
     return YOLO("taco_yolov8s.pt")  # YOLOv8s pretrained on 60 TACO classes
+
+@st.cache_data
+def load_samples():
+    with open(os.path.join(SAMPLES_DIR, "sources.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+@st.cache_data
+def square_thumbnail(path, size=400):
+    # Center-crop to a square so the grid lines up
+    return ImageOps.fit(Image.open(path).convert("RGB"), (size, size), Image.LANCZOS)
+
+@st.cache_data
+def detect_sample(path):
+    # Runs on the full-size sample; result.plot() returns a BGR array
+    return load_model()(Image.open(path))[0].plot()
 
 st.title("🔍 Trash Detection")
 
@@ -26,26 +45,24 @@ if img:
         model = load_model()
         result = model(image)[0]
         result_image = result.plot()
-        st.image(result_image, caption="Detected Objects", use_container_width=True)
+        st.image(result_image, caption="Detected Objects", use_container_width=True, channels="BGR")
 else:
     st.markdown("### 🖼️ Sample Images")
-    img_col1, img_col2, img_col3 = st.columns(3)
+    st.caption("Drag a sample into the upload box, or click Detect")
 
-    with img_col1:
-        st.image(os.path.join("assets", "sample1.JPG"), caption="Bottles near Water Body", use_container_width=True)
+    samples = load_samples()
 
-    with img_col2:
-        st.image(os.path.join("assets", "sample2.png"), caption="Can in vegetation", use_container_width=True)
+    selected = next((s for s in samples if s["file"] == st.session_state.get("sample_file")), None)
+    if selected:
+        with st.spinner("Detecting trash..."):
+            result_image = detect_sample(os.path.join(SAMPLES_DIR, selected["file"]))
+        st.image(result_image, channels="BGR", caption=f"Detected Objects: {selected['caption']}", use_container_width=True)
 
-    with img_col3:
-        st.image(os.path.join("assets", "sample3.jpg"), caption="Cleaner Bottles", use_container_width=True)
-
-    img_col4, img_col5, img_col6 = st.columns(3)
-
-    with img_col4:
-        st.image(os.path.join("assets", "sample4.jpg"), caption="Plastic Cup in Hand", use_container_width=True)
-
-    with img_col5:
-        st.image(os.path.join("assets", "sample5.jpg"), caption="Paper Cups on stand", use_container_width=True)
-
-
+    for start in range(0, len(samples), 4):
+        cols = st.columns(4)
+        for col, sample in zip(cols, samples[start:start + 4]):
+            with col:
+                st.image(square_thumbnail(os.path.join(SAMPLES_DIR, sample["file"])), caption=sample["caption"], use_container_width=True)
+                if st.button("Detect", key=f"detect_{sample['file']}"):
+                    st.session_state["sample_file"] = sample["file"]
+                    st.rerun()
